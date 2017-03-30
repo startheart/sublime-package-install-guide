@@ -1,5 +1,27 @@
 `此文档可以解决大部分 mac sublimeText3 安装插件的问题`
 
+## 修改host
+其实 安装不了Package Control 大部分原因是其ip 被墙了
+如何验证？
+
+`$ ping https://packagecontrol.io`
+
+返回
+
+`ping: cannot resolve https://packagecontrol.io/channel_v3.json: Unknown host`
+就说明被墙了
+
+可以通过 修改主机host解决
+window 下 
+`$ vim C:\Windows\System32\drivers\etc\hosts`
+
+mac 下
+
+`$ vim /etc/hosts`
+在文件最底下添加一行 
+`50.116.34.243 packagecontrol.io`
+会发现可以打开 https://packagecontrol.io/ 安装了
+
 ## sublime3 在mac手动安装Package Control
 1. 打开Packages目录，Preferences > Browse Packages 就可以进入这个目录。
 ![获取Packages路径](http://img4.07net01.com/upload/images/2017/01/23/160787231535281.png)
