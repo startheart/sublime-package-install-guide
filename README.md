@@ -6,20 +6,20 @@
 
 `$ ping https://packagecontrol.io`
 
-返回
+返回 `ping: cannot resolve https://packagecontrol.io/channel_v3.json: Unknown host`
 
-`ping: cannot resolve https://packagecontrol.io/channel_v3.json: Unknown host`
 就说明被墙了
 
 可以通过 修改主机host解决
-window 下 
-`$ vim C:\Windows\System32\drivers\etc\hosts`
 
-mac 下
+window 下  `$ vim C:\Windows\System32\drivers\etc\hosts`
 
-`$ vim /etc/hosts`
+mac 下  `$ vim /etc/hosts`
+
 在文件最底下添加一行 
+
 `50.116.34.243 packagecontrol.io`
+
 会发现可以打开 https://packagecontrol.io/ 安装了
 
 ## sublime3 在mac手动安装Package Control
